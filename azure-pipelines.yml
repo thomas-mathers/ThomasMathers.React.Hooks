@@ -26,8 +26,11 @@ steps:
   inputs:
     command: 'custom'
     customCommand: 'run build'
-- task: PublishBuildArtifacts@1
+- task: CopyFiles@2
   inputs:
-    PathtoPublish: '$(Pipeline.Workspace)/s/dist'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+    SourceFolder: 'thomasmathers.react.hooks'
+    Contents: |
+      dist/*
+      package.json
+      README.md
+    TargetFolder: '$(build.artifactstagingdirectory)'
