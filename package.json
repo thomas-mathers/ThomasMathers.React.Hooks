@@ -47,7 +47,7 @@
   "name": "thomasmathers.react.hooks",
   "repository": {
     "type": "git",
-    "url": "URL_OF_YOUR_REPOSITORY"
+    "url": "https://github.com/thomas-mathers/ThomasMathers.React.Hooks"
   },
   "scripts": {
     "build": "rimraf dist&&cross-env NODE_ENV=production babel --extensions .ts,.tsx src/lib --out-dir dist",
