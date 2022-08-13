@@ -29,7 +29,7 @@ steps:
 - task: CopyFiles@2
   inputs:
     Contents: |
-      dist/*
+      dist\**
       package.json
       README.md
     TargetFolder: '$(build.artifactstagingdirectory)'
