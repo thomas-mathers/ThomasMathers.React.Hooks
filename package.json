@@ -57,5 +57,5 @@
     "test": "react-scripts test",
     "test:ci": "npm run test -- --watchAll=false --reporters=default --reporters=jest-junit"
   },
-  "version": "0.1.0"
+  "version": "0.1.1"
 }
