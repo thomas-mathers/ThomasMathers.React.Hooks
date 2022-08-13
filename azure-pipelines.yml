@@ -28,6 +28,6 @@ steps:
     customCommand: 'run build'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    PathtoPublish: '$(Pipeline.Workspace)/s/dist'
     ArtifactName: 'drop'
     publishLocation: 'Container'
