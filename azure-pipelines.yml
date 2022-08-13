@@ -28,7 +28,6 @@ steps:
     customCommand: 'run build'
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'thomasmathers.react.hooks'
     Contents: |
       dist/*
       package.json
