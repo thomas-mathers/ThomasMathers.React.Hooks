@@ -1,0 +1,19 @@
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: Npm@1
+  inputs:
+    command: 'install'
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'test'
+- task: Npm@1
+  inputs:
+    command: 'publish'
+    publishRegistry: 'useFeed'
+    publishFeed: 'c856df94-baa7-4000-aea7-9f1460c94b32'
