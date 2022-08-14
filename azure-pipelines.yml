@@ -1,8 +1,14 @@
+name: '1.1.$(Rev:r)'
+
 trigger:
 - master
 
 pool:
   vmImage: ubuntu-latest
+
+variables:
+- name: version
+  value: $(Build.BuildNumber)
 
 steps:
 - task: Npm@1
@@ -26,6 +32,12 @@ steps:
   inputs:
     command: 'custom'
     customCommand: 'run build'
+- task: FileTransform@1
+  displayName: 'Update version number'
+  inputs:
+    folderPath: '$(System.DefaultWorkingDirectory)/**/'
+    fileType: 'json'
+    targetFiles: 'package.json'
 - task: Npm@1
   displayName: 'npm pack'
   inputs:
