@@ -23,11 +23,11 @@ export {
   requiresNonAlpha,
   requiresUpper,
   ErrorMessage,
-  useForm
+  useForm,
+  FieldType
 }
 export type {
   ValidationField,
   BinaryConstraint,
-  FieldType,
   Props,
 }
