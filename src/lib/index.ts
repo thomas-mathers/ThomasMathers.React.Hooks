@@ -9,6 +9,7 @@ import requiresUpper from './form/validators/requires-upper';
 import ValidationField from './form/validators/validation-field';
 import BinaryConstraint from './form/binary-constraint';
 import ErrorMessage from './form/error-message';
+import { FieldType } from './form/fields';
 import Props from './form/props';
 import useForm from './form/use-form';
 
@@ -27,5 +28,6 @@ export {
 export type {
   ValidationField,
   BinaryConstraint,
+  FieldType,
   Props,
 }
